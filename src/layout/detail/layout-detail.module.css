@@ -1,0 +1,16 @@
+.layoutDetail {
+  border: 1px solid #000;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.aside {
+  background-color: #f0f0f0;
+  border-right: 1px solid #000;
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+}

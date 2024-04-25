@@ -1,0 +1,35 @@
+.card {
+  flex: 1 1 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  border-radius: 0.5rem;
+  background-clip: border-box;
+  padding: 1rem;
+  min-width: 0;
+  height: 20rem;
+  max-width: 20rem;
+}
+
+.innerCard {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.innerCard > * + * {
+  padding: 1rem;
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  z-index: -1;
+}

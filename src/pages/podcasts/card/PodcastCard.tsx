@@ -28,19 +28,19 @@ export function PodcastCard({ podcast }: PodcastCardProps) {
   }, [])
 
   const { image: imageUrl } = podcast
-  return (
-    !hide && (
-      <>
-        <Card>
-          <div className={styles.empty}>
-            <CardImage url={imageUrl} />
-          </div>
-          <CardFooter>
-            <span className={styles.title}>{podcast.title}</span>
-            <small className={styles.subtitle}>Author:{podcast.author}</small>
-          </CardFooter>
-        </Card>
-      </>
-    )
+  return !hide ? (
+    <>
+      <Card>
+        <div className={styles.emptySpace}>
+          <CardImage url={imageUrl} />
+        </div>
+        <CardFooter>
+          <span className={styles.title}>{podcast.title}</span>
+          <small className={styles.subtitle}>Author:{podcast.author}</small>
+        </CardFooter>
+      </Card>
+    </>
+  ) : (
+    <Card className={styles.cardEmpty}></Card>
   )
 }

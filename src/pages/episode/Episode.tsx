@@ -12,17 +12,17 @@ export function Episode(): ReactNode {
     if (!podcastId || !episodeId) return
     PodcastLocator.getPodcastEpisodeById()
       .execute({ podcastId, episodeId })
-      .then((episode) => {
-        console.log('episode',episode)
-        setEpisode(episode)
-      })
+      .then((episode) => setEpisode(episode))
   }, [episodeId, podcastId])
 
   return (
     episode && (
       <div className={styles.episode}>
         <div>
-          <span className={styles.titleEpisode}>{episode.episodeName}</span>
+          <span
+            className={styles.titleEpisode}
+            dangerouslySetInnerHTML={{ __html: episode.episodeName }}
+          ></span>
         </div>
         <div>
           <p

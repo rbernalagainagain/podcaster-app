@@ -13,7 +13,7 @@ export function LayoutDetail(): ReactNode {
     PodcastLocator.getPodcastById()
       .execute(podcastId)
       .then((podcast) => setPodcast(podcast))
-  }, [])
+  }, [podcastId])
 
   return (
     <div className={styles.layoutDetail}>
@@ -22,14 +22,14 @@ export function LayoutDetail(): ReactNode {
           <div className={styles.img}>
             <img src={podcast?.image} alt="podcast" />
           </div>
-          <hr className={styles.divider} />
+          <hr />
           <div className={styles.info}>
             <Link to={`/podcast/${podcastId}`}>
               <span className={styles.title}>{podcast?.title}</span>
             </Link>
             <span className={styles.author}>by {podcast?.author}</span>
           </div>
-          <hr className={styles.divider} />
+          <hr />
           <div className={styles.description}>
             <span>Description:</span>
             <p>{podcast?.summary}</p>

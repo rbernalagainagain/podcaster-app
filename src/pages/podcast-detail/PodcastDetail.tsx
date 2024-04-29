@@ -37,6 +37,9 @@ export function PodcastDetail(): ReactNode {
                       </Link>
                     </td>
                     <td>
+                      {
+                        //TODO: Date
+                        }
                       {new Date(episode.releaseDate).toLocaleDateString()}
                     </td>
                     <td style={{ textAlign: 'center' }}>

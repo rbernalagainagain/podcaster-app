@@ -3,7 +3,7 @@ import styles from './card.module.css'
 
 interface CardProps {
   className?: string
-  children: ReactNode
+  children?: ReactNode
   onClick?: () => void
 }
 

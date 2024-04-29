@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { PodcastLocator } from '../../modules/podcast/di/podcast.locator.ts'
 import type { Episode as TypeEpisode } from '../../modules/podcast/domain/episode.ts'
+import styles from './episode.module.css'
 
 export function Episode(): ReactNode {
   const { podcastId, episodeId } = useParams()
@@ -10,24 +11,36 @@ export function Episode(): ReactNode {
   useEffect(() => {
     if (!podcastId || !episodeId) return
     PodcastLocator.getPodcastEpisodeById()
-      .execute(podcastId, episodeId)
+      .execute({ podcastId, episodeId })
       .then((episode) => {
+        console.log('episode',episode)
         setEpisode(episode)
       })
-  }, [])
+  }, [episodeId, podcastId])
 
   return (
-    <div>
-      {episode && (
+    episode && (
+      <div className={styles.episode}>
         <div>
-          <h1>{episode.episodeName}</h1>
-          <p>{episode.releaseDate}</p>
-          <p>{episode.description}</p>
-          <audio src={episode.url} autoPlay controls={true}>
+          <span className={styles.titleEpisode}>{episode.episodeName}</span>
+        </div>
+        <div>
+          <p
+            className={styles.descriptionEpisode}
+            dangerouslySetInnerHTML={{ __html: episode.description }}
+          ></p>
+        </div>
+        <hr />
+        <div>
+          <audio
+            src={episode.url}
+            controls={true}
+            className={styles.audioPlayer}
+          >
             Your browser does not support the <code>audio</code> element.
           </audio>
         </div>
-      )}
-    </div>
+      </div>
+    )
   )
 }

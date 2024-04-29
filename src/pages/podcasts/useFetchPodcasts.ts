@@ -6,7 +6,7 @@ export const useFetchPodcasts = () => {
   const [podcasts, setPodcasts] = useState<Podcast[]>([])
 
   useEffect(() => {
-    PodcastLocator.getAllPodcasts()
+    PodcastLocator.getPodcasts()
       .execute()
       .then((response) => setPodcasts(response))
   }, [])

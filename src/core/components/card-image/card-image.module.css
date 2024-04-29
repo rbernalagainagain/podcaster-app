@@ -1,7 +1,0 @@
-.cardImage {
-  display: flex;
-  place-content: center;
-
-  cursor: pointer;
-  clip-path: circle();
-}

@@ -6,7 +6,7 @@ export class PodcastAdapter implements Adapter<PodcastDto, Podcast> {
   toModel(dto: PodcastDto): Podcast {
     return {
       podcastId: dto.id.attributes['im:id'],
-      title: dto.title.label,
+      title: dto['im:name'].label,
       author: dto['im:artist'].label,
       image: dto['im:image'][2].label,
       searchTags: [dto.title.label, dto['im:artist'].label],

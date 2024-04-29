@@ -5,6 +5,9 @@ export interface PodcastDto {
   title: {
     label: string
   }
+  'im:name': {
+    label: string
+  },
   id: {
     label: string
     attributes: {

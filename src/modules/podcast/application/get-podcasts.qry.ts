@@ -1,10 +1,13 @@
 import { PodcastRepository } from '../domain/podcast.repository.ts'
+import { Query } from '@shared/use-case/query.ts'
 import { Podcast } from '../domain/podcast.ts'
 
-export class GetPodcastsQry {
-  constructor(private readonly podcastRepository: PodcastRepository) {}
+export class GetPodcastsQry extends Query<Podcast[]> {
+  constructor(private readonly podcastRepository: PodcastRepository) {
+    super()
+  }
 
-  async execute(): Promise<Podcast[]> {
+  execute(): Promise<Podcast[]> {
     return this.podcastRepository.getPodcasts()
   }
 }

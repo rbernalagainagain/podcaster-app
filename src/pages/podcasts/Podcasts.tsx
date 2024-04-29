@@ -3,9 +3,14 @@ import styles from './podcasts.module.css'
 import { useFetchPodcasts } from './useFetchPodcasts.ts'
 import { useNavigate } from 'react-router-dom'
 import { PodcastId } from '../../modules/podcast/domain/podcast-id.ts'
-import { Input } from '../../core/components/input/Input.tsx'
-import { PodcastCard, PodcastsGrid } from './grid/PodcastsGrid.tsx'
+import { Input } from '@shared/components/input/Input.tsx'
+import {
+  CardGrid,
+
+} from '@shared/components/card-grid/CardGrid.tsx'
 import { PodcastLocator } from '../../modules/podcast/di/podcast.locator.ts'
+import { Counter } from './counter/Counter.tsx'
+import { PodcastCard } from './card/PodcastCard.tsx'
 
 export interface FormSearchInput {
   terms: string
@@ -26,22 +31,18 @@ export function Podcasts(): ReactNode {
     <div className={styles.podcast}>
       <div className={styles.innerPodcasts}>
         <div className={styles.toolbar}>
-          <div className={styles.podcastCounter}>
-            <span className={styles.counter}>{podcasts.length}</span>
-          </div>
+          <Counter count={podcasts.length} />
           <Input
             onChange={(ev) => handleSubmit(ev.target.value)}
             placeholder="Filter podcasts..."
           />
         </div>
 
-        <div className={styles.content}>
-          <PodcastsGrid
-            podcasts={podcasts}
-            onClicked={onClicked}
-            renderItem={(podcast) => <PodcastCard podcast={podcast} />}
-          ></PodcastsGrid>
-        </div>
+        <CardGrid
+          podcasts={podcasts}
+          onClicked={onClicked}
+          renderItem={(podcast) => <PodcastCard podcast={podcast} />}
+        ></CardGrid>
       </div>
     </div>
   )

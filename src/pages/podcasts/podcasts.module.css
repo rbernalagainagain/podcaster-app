@@ -1,6 +1,6 @@
 .podcast {
   display: block;
-  padding: 2rem;
+  flex: 1;
 }
 
 .innerPodcasts {
@@ -19,27 +19,4 @@
 
 .toolbar > * + * {
   margin-left: 1rem;
-}
-
-.podcastCounter {
-  align-content: center;
-  justify-content: center;
-  line-height: 1;
-}
-
-.counter {
-  display: inline-flex;
-  border-radius: 4px;
-  background-color: #535bf2;
-  padding: 0.2rem;
-  color: #ffffff;
-}
-
-.content {
-  flex: 1 0 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
 }

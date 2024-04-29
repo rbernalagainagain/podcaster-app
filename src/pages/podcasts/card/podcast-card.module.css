@@ -1,0 +1,25 @@
+.title {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.subtitle {
+  display: inline-block;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.empty {
+  display: flex;
+  font-size: 0.85rem;
+  text-align: center;
+  justify-content: center;
+  max-height: 4rem;
+  width: 100%;
+  position: relative;
+}

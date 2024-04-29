@@ -1,13 +1,18 @@
-// import './App.css'
-import { LayoutMain } from './layout/main/LayoutMain.tsx'
+import { LayoutMain } from '@shared/layout/main/LayoutMain.tsx'
 import { Outlet } from 'react-router-dom'
 import { ReactNode } from 'react'
+import Context from './core/contexts/context.ts'
+import { useIsFetchingState } from './core/contexts/useIsFetchingState.tsx'
 
 function App(): ReactNode {
+  const isFetching = useIsFetchingState()
+
   return (
-    <LayoutMain>
-      <Outlet />
-    </LayoutMain>
+    <Context.Provider value={{ isFetching }}>
+      <LayoutMain>
+        <Outlet />
+      </LayoutMain>
+    </Context.Provider>
   )
 }
 

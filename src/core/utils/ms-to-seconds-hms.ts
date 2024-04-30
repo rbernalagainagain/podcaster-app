@@ -1,5 +1,4 @@
 export const millisecondsToHoursMinutesSeconds = (milliseconds: number) => {
-  console.log('milliseconds', milliseconds)
   const hours = Math.floor(milliseconds / 3600000)
   const minutes = Math.floor((milliseconds % 3600000) / 60000)
   const seconds = ((milliseconds % 60000) / 1000).toFixed(0)

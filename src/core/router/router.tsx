@@ -5,6 +5,14 @@ import { Podcasts } from '../../pages/podcasts/Podcasts.tsx'
 const router = createBrowserRouter([
   {
     path: '/',
+    async loader() {
+      const { loader } = await import('./../utils/loader-sw')
+      return loader()
+
+      // return await window.navigator.serviceWorker.ready.then((registration) => {
+      //   console.log('Service Worker ready', registration)
+      // })
+    },
     element: <App />,
     children: [
       {

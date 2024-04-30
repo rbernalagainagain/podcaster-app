@@ -6,7 +6,7 @@ const broadcast = new BroadcastChannel('sw-tunnel')
 
 self.addEventListener('install', function () {
   self.skipWaiting()
-  console.log('Service worker has been installed.')
+  console.debug('Service worker has been installed.')
 })
 
 self.addEventListener('activate', function (event) {
@@ -15,7 +15,7 @@ self.addEventListener('activate', function (event) {
 
 async function handleActivation() {
   await self.clients.claim()
-  console.log('Service worker has been activated.')
+  console.debug('Service worker has been activated.')
 }
 
 self.addEventListener('fetch', function (event) {
@@ -65,7 +65,7 @@ const cacheFirst = async (request) => {
     }
   }
 
-  console.log('Fetching from network...', request.url)
+  console.debug('Fetching from network...', request.url)
   const responseFromNetwork = await fetch(request)
   await addCache(request, responseFromNetwork)
 

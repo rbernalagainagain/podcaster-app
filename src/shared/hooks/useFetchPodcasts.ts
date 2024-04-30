@@ -7,7 +7,6 @@ export const useFetchPodcasts = () => {
 
   const fetchPodcasts = async () => {
     const response = await PodcastLocator.getPodcasts().execute()
-    console.log(response)
     setPodcasts(response)
   }
 

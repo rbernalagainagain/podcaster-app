@@ -3,7 +3,7 @@ export function registerSW() {
     navigator.serviceWorker.register(
       import.meta.env.MODE === 'production' ? '/sw.js' : '/dev-sw.js?dev-sw',
       {
-        scope: './',
+        // scope: './',
         updateViaCache: 'none',
       },
     )

@@ -23,7 +23,7 @@
       "@core/*": ["./src/core/*"],
       "@podcast/*": ["./src/features/podcast/*"]
     },
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": true
 //    "types": ["vitest/globals", "ts-mockito"]
   },
 

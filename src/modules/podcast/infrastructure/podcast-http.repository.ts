@@ -22,7 +22,7 @@ export class PodcastHttpRepository implements PodcastRepository {
   async getPodcastById(podcastId: PodcastId): Promise<PodcastDetail> {
     const adapter = new PodcastDetailAdapter()
     const response = await this.httpClient.get<PodcastDetailDto>(
-      `lookup?id=${podcastId}&media=podcast&entity=podcastEpisode&limit=300`,
+      `lookup?id=${podcastId}&media=podcast&entity=podcastEpisode&limit=20`,
     )
     return adapter.toModel(response)
   }

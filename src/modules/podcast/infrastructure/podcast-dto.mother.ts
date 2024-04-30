@@ -4,6 +4,9 @@ export class PodcastDtoMother {
   static getAll(): PodcastDto[] {
     return [
       {
+        'im:name': {
+          label: 'The Joe Budden Podcast',
+        },
         'im:image': [
           {
             label:
@@ -25,8 +28,7 @@ export class PodcastDtoMother {
           label: 'The Joe Budden Podcast - The Joe Budden Network',
         },
         id: {
-          label:
-            'https://podcasts.apple.com/us/podcast/the-joe-budden-podcast/id1535809341?uo=2',
+          label: 'https://podcasts.apple.com/us/podcast/the-joe-budden-podcast/id1535809341?uo=2',
           attributes: { 'im:id': '1535809341' },
         },
         'im:artist': {
@@ -41,6 +43,9 @@ export class PodcastDtoMother {
         },
       },
       {
+        'im:name': {
+          label: 'R&B Money',
+        },
         'im:image': [
           {
             label:
@@ -62,8 +67,7 @@ export class PodcastDtoMother {
           label: 'R&B Money - The Black Effect and iHeartPodcasts',
         },
         id: {
-          label:
-            'https://podcasts.apple.com/us/podcast/r-b-money/id1623212249?uo=2',
+          label: 'https://podcasts.apple.com/us/podcast/r-b-money/id1623212249?uo=2',
           attributes: { 'im:id': '1623212249' },
         },
         'im:artist': {
@@ -74,6 +78,9 @@ export class PodcastDtoMother {
         },
       },
       {
+        'im:name': {
+          label: 'Friday Night Karaoke',
+        },
         'im:image': [
           {
             label:
@@ -95,8 +102,7 @@ export class PodcastDtoMother {
           label: 'Friday Night Karaoke - Friday Night Karaoke',
         },
         id: {
-          label:
-            'https://podcasts.apple.com/us/podcast/friday-night-karaoke/id1574029840?uo=2',
+          label: 'https://podcasts.apple.com/us/podcast/friday-night-karaoke/id1574029840?uo=2',
           attributes: { 'im:id': '1574029840' },
         },
         'im:artist': { label: 'Friday Night Karaoke' },

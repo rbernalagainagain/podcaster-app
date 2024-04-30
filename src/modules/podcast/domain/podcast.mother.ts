@@ -5,7 +5,7 @@ export class PodcastMother {
     return [
       {
         podcastId: '1535809341',
-        title: 'The Joe Budden Podcast - The Joe Budden Network',
+        title: 'The Joe Budden Podcast',
         author: 'The Joe Budden Network',
         image: `https://is1-ssl.mzstatic.com/image/thumb/Podcasts113/v4/f2/21/fa/f221fabd-017f-5125-633b-f1fe4f39802a/mza_182995249085044287.jpg/170x170bb.png`,
         searchTags: [
@@ -17,7 +17,7 @@ export class PodcastMother {
       },
       {
         podcastId: '1623212249',
-        title: 'R&B Money - The Black Effect and iHeartPodcasts',
+        title: 'R&B Money',
         author: 'The Black Effect and iHeartPodcasts',
         image:
           'https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/06/72/c9/0672c949-e262-23b2-8c29-3db1def67d20/mza_4917860291183321531.jpg/170x170bb.png',
@@ -29,7 +29,7 @@ export class PodcastMother {
       },
       {
         podcastId: '1574029840',
-        title: 'Friday Night Karaoke - Friday Night Karaoke',
+        title: 'Friday Night Karaoke',
         author: 'Friday Night Karaoke',
         image:
           'https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/75/6f/21/756f219f-111f-b47f-48e5-f39946e643bf/mza_12168793512556367093.jpg/170x170bb.png',

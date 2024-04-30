@@ -10,12 +10,10 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "homepage": "https://rbernalagainagain.github.io/podcaster-app/",
   "dependencies": {
     "axios": "1.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "7.51.3",
     "react-router-dom": "6.23.0"
   },
   "devDependencies": {
@@ -28,7 +26,6 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "gh-pages": "^6.1.1",
     "prettier": "3.2.5",
     "ts-mockito": "2.6.1",
     "typescript": "^5.2.2",

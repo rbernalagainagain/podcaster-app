@@ -8,11 +8,8 @@
     "build": "tsc && vite build",
     "test": "vitest",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
-  "homepage": "https://rbernalagainagain.github.io/podcaster-app/",
   "dependencies": {
     "axios": "1.6.8",
     "react": "^18.2.0",

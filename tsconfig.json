@@ -20,6 +20,7 @@
     "noUnusedParameters": true,
     "paths": {
       "@shared/*": ["./src/shared/*"],
+      "@core/*": ["./src/core/*"],
       "@podcast/*": ["./src/features/podcast/*"]
     },
     "noFallthroughCasesInSwitch": true,

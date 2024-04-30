@@ -1,5 +1,5 @@
 import { PodcastHttpRepository } from '../infrastructure/podcast-http.repository.ts'
-import httpClient, {
+import instanceAxios, {
   AxiosClient,
 } from '../../../core/http-client/axios-client.ts'
 import { GetPodcastsQry } from '../application/get-podcasts.qry.ts'
@@ -10,9 +10,8 @@ import { GetPodcastEpisodeByIdQry } from '../application/get-podcast-episode-by-
 
 export class PodcastLocator {
   private static readonly podcastHttpRepository = new PodcastHttpRepository(
-    new AxiosClient(httpClient),
+    new AxiosClient(instanceAxios),
   )
-  // private static podcastHttpRepository = new PodcastHttpRepository(httpClient)
 
   static getPodcasts() {
     return new GetPodcastsQry(this.podcastHttpRepository)

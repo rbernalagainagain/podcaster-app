@@ -11,6 +11,10 @@ export default defineConfig({
         find: '@shared',
         replacement: path.resolve(__dirname, './src/shared'),
       },
+      {
+        find: '@core',
+        replacement: path.resolve(__dirname, './src/core'),
+      },
     ],
   },
   plugins: [

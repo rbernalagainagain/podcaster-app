@@ -1,7 +1,7 @@
 import { ChangeEvent, ReactNode, useEffect, useState } from 'react'
 import styles from './input.module.css'
-import { UseFormRegister } from 'react-hook-form'
 import { FormSearchInput } from '../../../pages/podcasts/Podcasts.tsx'
+import { UseFormRegister } from 'react-hook-form'
 
 export interface InputProps {
   register?: UseFormRegister<FormSearchInput>

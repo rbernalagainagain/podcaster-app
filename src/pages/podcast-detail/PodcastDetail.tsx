@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { millisecondsToHoursMinutesSeconds } from '@core/utils/ms-to-seconds-hms.ts'
-import { useFetchPodcastDetail } from './useFetchPodcastDetail.tsx'
+import { useFetchPodcastDetail } from '@hooks/useFetchPodcastDetail.ts'
 import styles from './podcast-detail.module.css'
 
 export function Component(): ReactNode {

@@ -81,7 +81,7 @@ describe('PodcastHttpRepository', () => {
     await sut.getPodcastById('123')
     verify(
       httpClient.get(
-        'lookup?id=123&media=podcast&entity=podcastEpisode&limit=20',
+        'lookup?id=123&media=podcast&entity=podcastEpisode&limit=20&sort=recent',
       ),
     ).called()
   })

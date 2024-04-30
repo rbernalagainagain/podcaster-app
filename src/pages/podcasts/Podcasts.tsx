@@ -1,6 +1,6 @@
 import { ReactNode, useCallback } from 'react'
 import styles from './podcasts.module.css'
-import { useFetchPodcasts } from './useFetchPodcasts.ts'
+import { useFetchPodcasts } from '@shared/hooks/useFetchPodcasts.ts'
 import { useNavigate } from 'react-router-dom'
 import { PodcastId } from '../../modules/podcast/domain/podcast-id.ts'
 import { Input } from '@shared/components/input/Input.tsx'

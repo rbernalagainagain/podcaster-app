@@ -8,12 +8,16 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@shared',
-        replacement: path.resolve(__dirname, './src/shared'),
+        find: '@hooks',
+        replacement: path.resolve(__dirname, './src/shared/hooks'),
       },
       {
         find: '@core',
         replacement: path.resolve(__dirname, './src/core'),
+      },
+      {
+        find: '@shared',
+        replacement: path.resolve(__dirname, './src/shared'),
       },
     ],
   },

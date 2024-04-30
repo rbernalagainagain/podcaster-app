@@ -19,24 +19,14 @@ export function Component(): ReactNode {
     episode && (
       <div className={styles.episode}>
         <div>
-          <span
-            className={styles.titleEpisode}
-            dangerouslySetInnerHTML={{ __html: episode.episodeName }}
-          ></span>
+          <span className={styles.titleEpisode} dangerouslySetInnerHTML={{ __html: episode.episodeName }}></span>
         </div>
         <div>
-          <p
-            className={styles.descriptionEpisode}
-            dangerouslySetInnerHTML={{ __html: episode.description }}
-          ></p>
+          <p className={styles.descriptionEpisode} dangerouslySetInnerHTML={{ __html: episode.description }}></p>
         </div>
         <hr />
         <div>
-          <audio
-            src={episode.url}
-            controls={true}
-            className={styles.audioPlayer}
-          >
+          <audio src={episode.url} controls={true} className={styles.audioPlayer}>
             Your browser does not support the <code>audio</code> element.
           </audio>
         </div>

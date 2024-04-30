@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     outDir: 'build',
   },
-  base: 'https://rbernalagainagain.github.io/podcaster-app/',
+  base: 'https://rbernalagainagain.github.io/',
   resolve: {
     alias: [
       {

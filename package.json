@@ -29,6 +29,7 @@
     "prettier": "3.2.5",
     "ts-mockito": "2.6.1",
     "typescript": "^5.2.2",
+    "vercel": "34.1.4",
     "vite": "^5.2.0",
     "vite-plugin-pwa": "^0.19.8",
     "vitest": "^1.5.2"

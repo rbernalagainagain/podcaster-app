@@ -40,7 +40,8 @@
 .table thead tr th {
   position: sticky;
   top: 0;
-  border-bottom: 2px solid var(--content-color-secondary);
+
+  border-bottom: 1px solid var(--divider-color);
   background-color: var(--background-color);
 }
 
@@ -63,5 +64,5 @@
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: #ffffff;
+  background-color: var(--odd-row);
 }

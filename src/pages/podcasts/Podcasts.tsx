@@ -20,6 +20,7 @@ export function Podcasts(): ReactNode {
   const onClicked = useCallback((podcastId: PodcastId) => navigate(`/podcast/${podcastId}`), [navigate])
 
   const handleSubmit = useCallback(async (terms: string) => {
+    //TODO: Implementar a busca de podcasts comas
     const response = await PodcastLocator.getPodcastByTerms().execute(terms)
     setPodcasts(response)
   }, [])

@@ -10,6 +10,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "homepage": "https://rbernalagainagain.github.io/podcaster-app/",
   "dependencies": {
     "axios": "1.6.8",
     "react": "^18.2.0",

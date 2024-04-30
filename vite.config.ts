@@ -5,7 +5,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/podcaster-app/' : '/',
+  // base: process.env.NODE_ENV === 'production' ? '/podcaster-app/' : '/',
   resolve: {
     alias: [
       {

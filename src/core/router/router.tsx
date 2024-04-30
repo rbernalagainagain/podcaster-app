@@ -29,7 +29,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: process.env.NODE_ENV === 'production' ? '/podcaster-app/' : '/',
+    // basename: process.env.NODE_ENV === 'production' ? '/podcaster-app/' : '/',
   },
 )
 

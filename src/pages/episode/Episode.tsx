@@ -4,7 +4,7 @@ import { PodcastLocator } from '../../modules/podcast/di/podcast.locator.ts'
 import type { Episode as TypeEpisode } from '../../modules/podcast/domain/episode.ts'
 import styles from './episode.module.css'
 
-export function Episode(): ReactNode {
+export function Component(): ReactNode {
   const { podcastId, episodeId } = useParams()
   const [episode, setEpisode] = useState<TypeEpisode>()
 
@@ -44,3 +44,5 @@ export function Episode(): ReactNode {
     )
   )
 }
+
+Component.displayName = 'Episode'

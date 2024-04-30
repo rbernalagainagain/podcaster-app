@@ -6,7 +6,7 @@ import { PodcastId } from '../domain/podcast-id.ts'
 import { PodcastDetailAdapter } from './podcast-detail.adapter.ts'
 import { PodcastDetail } from '../domain/podcast-detail.ts'
 import { PodcastDetailDto } from './podcast-detail-dto.ts'
-import { HttpClient } from '../../../core/http-client/http-client.ts'
+import { HttpClient } from '@core/http-client/http-client.ts'
 
 export class PodcastHttpRepository implements PodcastRepository {
   constructor(private readonly httpClient: HttpClient) {}
@@ -18,11 +18,11 @@ export class PodcastHttpRepository implements PodcastRepository {
     }>('us/rss/toppodcasts/limit=100/genre=1310/json')
     return response.feed.entry.map((podcastDto) => adapter.toModel(podcastDto))
   }
-
+  //TODO limit
   async getPodcastById(podcastId: PodcastId): Promise<PodcastDetail> {
     const adapter = new PodcastDetailAdapter()
     const response = await this.httpClient.get<PodcastDetailDto>(
-      `lookup?id=${podcastId}&media=podcast&entity=podcastEpisode&limit=20`,
+      `lookup?id=${podcastId}&media=podcast&entity=podcastEpisode&limit=300`,
     )
     return adapter.toModel(response)
   }

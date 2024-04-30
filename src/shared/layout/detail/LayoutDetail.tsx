@@ -4,7 +4,7 @@ import styles from './layout-detail.module.css'
 import { PodcastLocator } from '../../../modules/podcast/di/podcast.locator.ts'
 import { Podcast } from '../../../modules/podcast/domain/podcast.ts'
 
-export function LayoutDetail(): ReactNode {
+export function Component(): ReactNode {
   const { podcastId } = useParams()
   const [podcast, setPodcast] = useState<Podcast>()
 
@@ -42,3 +42,5 @@ export function LayoutDetail(): ReactNode {
     </div>
   )
 }
+
+Component.displayName = 'LayoutDetail'

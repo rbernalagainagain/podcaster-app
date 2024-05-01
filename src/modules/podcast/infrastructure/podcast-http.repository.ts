@@ -6,7 +6,7 @@ import { PodcastId } from '../domain/podcast-id.ts'
 import { PodcastDetailAdapter } from './podcast-detail.adapter.ts'
 import { PodcastDetail } from '../domain/podcast-detail.ts'
 import { PodcastDetailDto } from './podcast-detail-dto.ts'
-import { HttpClient } from '@core/http-client/http-client.ts'
+import { HttpClient } from '@shared/http-client/http-client.ts'
 
 export class PodcastHttpRepository implements PodcastRepository {
   constructor(private readonly httpClient: HttpClient) {}

@@ -16,6 +16,5 @@ export function useFetchPodcastDetail(podcastId: PodcastId | undefined) {
     fetchPodcastDetail(podcastId)
   }, [])
 
-  console.log('podcastDetail', podcastDetail)
   return podcastDetail
 }

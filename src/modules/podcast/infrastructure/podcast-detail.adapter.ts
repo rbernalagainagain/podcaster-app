@@ -1,4 +1,4 @@
-import { Adapter } from '@core/types/adapter.ts'
+import { Adapter } from '@shared/types/adapter.ts'
 import { PodcastDetailDto } from './podcast-detail-dto.ts'
 import { PodcastDetail } from '../domain/podcast-detail.ts'
 

@@ -1,7 +1,7 @@
 import { PodcastHttpRepository } from './podcast-http.repository.ts'
 import { anything, instance, mock, verify, when } from 'ts-mockito'
 import { PodcastDtoMother } from './podcast-dto.mother.ts'
-import { HttpClient } from '@core/http-client/http-client.ts'
+import { HttpClient } from '@shared/http-client/http-client.ts'
 import { describe, expect, it } from 'vitest'
 import { PodcastMother } from '../domain/podcast.mother.ts'
 import { PodcastDetailDtoMother } from './podcast-detail-dto.mother.ts'

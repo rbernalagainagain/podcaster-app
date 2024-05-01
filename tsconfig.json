@@ -18,6 +18,7 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "types": ["cypress", "node"],
     "paths": {
       "@hooks/*": ["./src/shared/hooks/*"],
       "@components/*": ["./src/shared/components/*"],
@@ -29,6 +30,6 @@
     //    "types": ["vitest/globals", "ts-mockito"]
   },
 
-  "include": ["src"],
+  "include": ["src", "cypress"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

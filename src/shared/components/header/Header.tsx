@@ -1,7 +1,7 @@
 import { ReactNode, useContext } from 'react'
 import styles from './header.module.css'
 import { Link } from 'react-router-dom'
-import fetchStateContext from '../../../core/contexts/context.ts'
+import fetchStateContext from '../../../contexts/context.ts'
 
 export function Header(): ReactNode {
   const { isFetching } = useContext<{ isFetching: boolean }>(fetchStateContext)

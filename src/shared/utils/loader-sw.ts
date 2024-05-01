@@ -5,7 +5,7 @@ export const loader = async () => {
   }
 
   const registration = await window.navigator.serviceWorker.ready
-  if (registration.active){
+  if (registration.active) {
     console.debug('Service Worker ready', registration.active.state)
   }
 

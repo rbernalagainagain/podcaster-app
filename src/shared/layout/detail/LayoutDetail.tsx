@@ -15,7 +15,7 @@ export function Component(): ReactNode {
           </div>
           <hr />
           <div className={styles.info}>
-            <Link to={`./podcast/${podcastId}`}  >
+            <Link to={`./podcast/${podcastId}`}>
               <span data-test-id="title-podcast-link" className={styles.title}>
                 {podcast?.title}
               </span>

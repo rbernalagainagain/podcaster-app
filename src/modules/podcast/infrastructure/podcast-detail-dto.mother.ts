@@ -7,8 +7,7 @@ export class PodcastDetailDtoMother {
         {
           kind: 'podcast-episode',
           trackName: 'The Joe Budden Podcast',
-          description:
-            'Joe Budden and his co-hosts discuss hip hop culture and news.',
+          description: 'Joe Budden and his co-hosts discuss hip hop culture and news.',
           releaseDate: '2021-01-01T00:00:00Z',
           trackTimeMillis: 60000,
           trackId: '123456',

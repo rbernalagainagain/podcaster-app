@@ -13,4 +13,3 @@ urlRequestInterceptorFn(instance)
 dataResponseInterceptorFn(instance)
 
 export default instance
-

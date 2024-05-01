@@ -4,14 +4,10 @@ import { useFetchPodcasts } from '@shared/hooks/useFetchPodcasts.ts'
 import { useNavigate } from 'react-router-dom'
 import { PodcastId } from '@podcast/domain/podcast-id.ts'
 import { Input } from '@shared/components/input/Input.tsx'
-import { CardGrid } from '@shared/components/card-grid/CardGrid.tsx'
 import { Counter } from '@shared/components/counter/Counter.tsx'
-import { PodcastCard } from '@podcast/ui/card/PodcastCard.tsx'
 import { PodcastLocator } from '@podcast/di/podcast.locator.ts'
-
-export interface FormSearchInput {
-  terms: string
-}
+import { PodcastGrid } from '@podcast/ui/grid/PodcastGrid.tsx'
+import { PodcastCard } from '@podcast/ui/card/PodcastCard.tsx'
 
 export function Podcasts(): ReactNode {
   const navigate = useNavigate()
@@ -32,11 +28,11 @@ export function Podcasts(): ReactNode {
           <Input onChange={(ev) => handleSubmit(ev.target.value)} placeholder="Filter podcasts..." />
         </div>
 
-        <CardGrid
-          podcasts={podcasts}
+        <PodcastGrid
           onClicked={onClicked}
+          podcasts={podcasts}
           renderItem={(podcast) => <PodcastCard podcast={podcast} />}
-        ></CardGrid>
+        />
       </div>
     </div>
   )

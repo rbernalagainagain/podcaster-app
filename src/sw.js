@@ -20,10 +20,7 @@ async function handleActivation() {
 
 self.addEventListener('fetch', function (event) {
   const url = new URL(event.request.url)
-  if (
-    url.origin.includes('api.allorigins.win') ||
-    url.origin.includes('is1-ssl.mzstatic.com')
-  ) {
+  if (url.origin.includes('api.allorigins.win') || url.origin.includes('is1-ssl.mzstatic.com')) {
     onMessage({ type: 'STATE_LOAD_DATA', isFetching: true })
     return event.respondWith(cacheFirst(event.request))
   }

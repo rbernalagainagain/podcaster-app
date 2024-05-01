@@ -4,12 +4,13 @@ import { CardFooter } from '@components/card-footer/CardFooter.tsx'
 import { Podcast } from '../../domain/podcast.ts'
 import styles from './podcast-card.module.css'
 import { useHideByTime } from '@hooks/useHideByTime.ts'
+import { ReactNode } from 'react'
 
 interface PodcastCardProps {
   podcast: Podcast
 }
 
-export const PodcastCard = ({ podcast }: PodcastCardProps) => {
+export const PodcastCard = ({ podcast }: PodcastCardProps): ReactNode => {
   const hide = useHideByTime()
   return !hide ? (
     <Card>

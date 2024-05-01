@@ -72,7 +72,7 @@ describe('PodcastHttpRepository', () => {
     when(httpClient.get(anything())).thenResolve(PodcastDetailDtoMother.detail())
 
     await sut.getPodcastById('123')
-    verify(httpClient.get('lookup?id=123&media=podcast&entity=podcastEpisode&limit=20&sort=recent')).called()
+    verify(httpClient.get('lookup?id=123&media=podcast&entity=podcastEpisode&limit=20')).called()
   })
 })
 

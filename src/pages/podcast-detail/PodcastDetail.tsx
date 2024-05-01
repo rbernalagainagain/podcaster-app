@@ -12,7 +12,7 @@ export function Component(): ReactNode {
     <div className={styles.podcastDetail}>
       <div className={styles.header}>
         <span className={styles.totalEpisodes}>
-          Episodes: {podcastDetail !== undefined ? podcastDetail.episodes.length : '--'}
+          Episodes: {podcastDetail !== undefined ? podcastDetail.episodesCount : '--'}
         </span>
       </div>
       {podcastDetail !== undefined && podcastId && (

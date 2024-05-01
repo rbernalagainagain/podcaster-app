@@ -1,6 +1,7 @@
 export interface PodcastDetailDto {
   results: {
-    kind: 'podcast-episode'
+    trackCount?: number
+    kind: 'podcast-episode' | 'podcast'
     trackName: string
     description: string
     releaseDate: string

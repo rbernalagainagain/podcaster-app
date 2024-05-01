@@ -3,6 +3,7 @@ import { PodcastDetail } from './podcast-detail.ts'
 export class PodcastDetailMother {
   static detail(): PodcastDetail {
     return {
+      episodesCount: 480,
       episodes: [
         {
           episodeName: 'The Joe Budden Podcast',

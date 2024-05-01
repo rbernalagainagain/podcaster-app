@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import styles from './card-grid.module.css'
-import { useInfinityScroll } from '@hooks/useInfinityScroll.tsx'
+import { useInfinityScroll } from '@hooks/useInfinityScroll.ts'
 
 interface CardGridProps<T> {
   list: T[]

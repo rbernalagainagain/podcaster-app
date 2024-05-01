@@ -4,7 +4,10 @@ import { PodcastDetail } from '../domain/podcast-detail.ts'
 
 export class PodcastDetailAdapter implements Adapter<PodcastDetailDto, PodcastDetail> {
   toModel(podcastDetailDto: PodcastDetailDto): PodcastDetail {
+    const firstResult = podcastDetailDto.results[0]
+
     return {
+      ...(firstResult?.trackCount && { episodesCount: firstResult.trackCount }),
       episodes: podcastDetailDto.results
         .filter((result) => result.kind === 'podcast-episode')
         .map((result) => ({

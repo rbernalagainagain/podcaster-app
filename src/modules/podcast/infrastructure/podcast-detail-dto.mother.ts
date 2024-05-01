@@ -5,6 +5,17 @@ export class PodcastDetailDtoMother {
     return {
       results: [
         {
+          trackCount: 480,
+          kind: 'podcast',
+          trackName: 'foo',
+          description: 'foo',
+          releaseDate: 'foo',
+          trackTimeMillis: 60000,
+          trackId: 'foo',
+          episodeUrl: 'foo',
+        },
+        {
+          trackCount: 480,
           kind: 'podcast-episode',
           trackName: 'The Joe Budden Podcast',
           description: 'Joe Budden and his co-hosts discuss hip hop culture and news.',

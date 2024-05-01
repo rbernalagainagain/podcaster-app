@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Card } from '@shared/components/card/Card.tsx'
-import { CardImage } from '@shared/components/card-image/CardImage.tsx'
-import { CardFooter } from '@shared/components/card-footer/CardFooter.tsx'
-import { Podcast } from '../../../modules/podcast/domain/podcast.ts'
+import { Card } from '@components/card/Card.tsx'
+import { CardImage } from '@components/card-image/CardImage.tsx'
+import { CardFooter } from '@components/card-footer/CardFooter.tsx'
+import { Podcast } from '../../domain/podcast.ts'
 import styles from './podcast-card.module.css'
 
 let acc = 0

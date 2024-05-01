@@ -6,7 +6,7 @@ import styles from './podcast-detail.module.css'
 
 export function Component(): ReactNode {
   const { podcastId } = useParams()
-  const { podcastDetail } = useFetchPodcastDetail(podcastId)
+  const podcastDetail = useFetchPodcastDetail(podcastId)
 
   return (
     <div className={styles.podcastDetail}>

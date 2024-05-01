@@ -17,7 +17,6 @@ describe('PodcastHttpRepository', () => {
     })
 
     const actual = await sut.getPodcasts()
-
     expect(actual).toEqual(PodcastMother.getAll())
   })
 
@@ -43,16 +42,12 @@ describe('PodcastHttpRepository', () => {
     })
 
     await sut.getPodcasts()
-    verify(
-      httpClient.get('us/rss/toppodcasts/limit=100/genre=1310/json'),
-    ).called()
+    verify(httpClient.get('us/rss/toppodcasts/limit=100/genre=1310/json')).called()
   })
 
   it('should return a podcast detail', async () => {
     const { httpClient, sut } = setup()
-    when(httpClient.get(anything())).thenResolve(
-      PodcastDetailDtoMother.detail(),
-    )
+    when(httpClient.get(anything())).thenResolve(PodcastDetailDtoMother.detail())
 
     const actual = await sut.getPodcastById('123')
 
@@ -74,16 +69,10 @@ describe('PodcastHttpRepository', () => {
 
   it('should call repository to get podcast by id with the correct url', async () => {
     const { httpClient, sut } = setup()
-    when(httpClient.get(anything())).thenResolve(
-      PodcastDetailDtoMother.detail(),
-    )
+    when(httpClient.get(anything())).thenResolve(PodcastDetailDtoMother.detail())
 
     await sut.getPodcastById('123')
-    verify(
-      httpClient.get(
-        'lookup?id=123&media=podcast&entity=podcastEpisode&limit=20&sort=recent',
-      ),
-    ).called()
+    verify(httpClient.get('lookup?id=123&media=podcast&entity=podcastEpisode&limit=20&sort=recent')).called()
   })
 })
 

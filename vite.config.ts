@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import path from 'path'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,10 +20,15 @@ export default defineConfig({
         find: '@shared',
         replacement: path.resolve(__dirname, './src/shared'),
       },
+      {
+        find: '@podcasts',
+        replacement: path.resolve(__dirname, './src/modules/podcast/*'),
+      },
     ],
   },
   plugins: [
     react(),
+    tsconfigPaths(),
     VitePWA({
       srcDir: 'src',
       filename: 'sw.js',
@@ -39,4 +45,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
     }),
   ],
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './test.setup.ts',
+  },
 })

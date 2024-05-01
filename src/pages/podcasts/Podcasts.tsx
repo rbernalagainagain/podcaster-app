@@ -2,12 +2,12 @@ import { ReactNode, useCallback } from 'react'
 import styles from './podcasts.module.css'
 import { useFetchPodcasts } from '@shared/hooks/useFetchPodcasts.ts'
 import { useNavigate } from 'react-router-dom'
-import { PodcastId } from '../../modules/podcast/domain/podcast-id.ts'
+import { PodcastId } from '@podcast/domain/podcast-id.ts'
 import { Input } from '@shared/components/input/Input.tsx'
 import { CardGrid } from '@shared/components/card-grid/CardGrid.tsx'
-import { Counter } from './counter/Counter.tsx'
-import { PodcastCard } from './card/PodcastCard.tsx'
-import { PodcastLocator } from '../../modules/podcast/di/podcast.locator.ts'
+import { Counter } from '@shared/components/counter/Counter.tsx'
+import { PodcastCard } from '@podcast/ui/card/PodcastCard.tsx'
+import { PodcastLocator } from '@podcast/di/podcast.locator.ts'
 
 export interface FormSearchInput {
   terms: string

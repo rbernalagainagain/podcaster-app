@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# Podcaster | La plataforma de podcasting que necesitabas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository provides a deployment guide that demonstrates the Podcaster application. It offers a detailed step-by-step guide to configuring, modifying and using the application.
 
-Currently, two official plugins are available:
+To start working on it:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`npm install`
 
-## Expanding the ESLint configuration
+To start the application in development mode:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+`npm run dev`
 
-- Configure the top-level `parserOptions` property like this:
+To start the application in production mode:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+`npm run preview`
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The application has two modes for compiling the code, development and production. To start the development mode:
+
+`npm run build:dev`
+
+To start the production mode:
+
+`npm run build`
+
+## Features
+
+### Cache / Service Worker
+
+The application has a strong default cache. For this functionality it is important that the browser you use allows the use of service worker.
+
+## Architecture
+
+**SOLID** principles have been followed, with a **Hexagonal / DDD architecture**
+
+**_The application is built with the following technologies:_**
+
+- [React](https://reactjs.org/)
+- CSS Modules
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Axios](https://axios-http.com/)
+- [Node.js](https://nodejs.org/) (version 20 or higher)

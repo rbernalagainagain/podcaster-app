@@ -63,6 +63,7 @@ describe('PodcastHttpRepository', () => {
     const actual = await sut.getPodcastById('123')
 
     expect(actual).toEqual({
+      episodesCount: 0,
       episodes: [],
     })
   })

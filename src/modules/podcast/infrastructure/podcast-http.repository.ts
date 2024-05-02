@@ -18,7 +18,7 @@ export class PodcastHttpRepository implements PodcastRepository {
     }>('us/rss/toppodcasts/limit=100/genre=1310/json')
     return response.feed.entry.map((podcastDto) => adapter.toModel(podcastDto))
   }
-  //TODO limit
+
   async getPodcastById(podcastId: PodcastId): Promise<PodcastDetail> {
     const adapter = new PodcastDetailAdapter()
     const response = await this.httpClient.get<PodcastDetailDto>(

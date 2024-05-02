@@ -1,21 +1,45 @@
 import { useEffect, useRef, useState } from 'react'
 
-export const useInfinityScroll = <T,>(list: T[]) => {
+const PAGE_SIZE = 5
+let timeOutId: NodeJS.Timeout
+
+export const useInfinityScroll = <T>(list: T[]) => {
   const intersectContainer = useRef<HTMLDivElement>(null)
   const [piece, setPiece] = useState<T[]>([])
 
   useEffect(() => {
-    setPiece(list.slice(0, 10))
+    if (piece.length === list.length) clearInterval(timeOutId)
+  }, [piece])
+
+  useEffect(() => {
+    setPiece(list.slice(0, PAGE_SIZE))
+
+    return () => {
+      clearInterval(timeOutId)
+    }
+  }, [list])
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        const entry = entries[0]
-        if (!entry.isIntersecting) return
-        setPiece((prev) => [...prev, ...list.slice(prev.length, prev.length + 20)])
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            timeOutId = setInterval(() => {
+              console.debug('useInfinityScroll.loadMore', entry.isIntersecting)
+              setPiece((prev) => {
+                return [...prev, ...list.slice(prev.length, prev.length + PAGE_SIZE)]
+              })
+            }, 100)
+
+            return
+          }
+          clearInterval(timeOutId)
+        }
       },
       {
         root: null,
         rootMargin: '0px',
-        threshold: 0.2,
+        threshold: 1.0,
       },
     )
 

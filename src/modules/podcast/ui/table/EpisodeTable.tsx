@@ -24,11 +24,11 @@ export const EpisodeTable = memo(
             <th style={{ textAlign: 'center' }}>Duration</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody data-cy="row-table">
           {podcastDetail?.episodes.length !== 0 &&
             podcastDetail?.episodes.map((episode, key) => {
               return (
-                <tr key={key}>
+                <tr key={key} data-podcastId={podcastId}>
                   <td>
                     <Link to={`/podcast/${podcastId}/episode/${episode.episodeId}`}>{episode.episodeName}</Link>
                   </td>

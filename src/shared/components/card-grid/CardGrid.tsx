@@ -12,7 +12,7 @@ export const CardGrid = <T,>({ list, children }: CardGridProps<T>) => {
 
   return (
     <>
-      <div className={styles.content}>{children}</div>
+      <div className={styles.content} data-cy="grid-content">{children}</div>
       <div className={styles.intersect} ref={intersectContainer}></div>
     </>
   )

@@ -18,7 +18,7 @@ export function Component(): ReactNode {
         </div>
         <hr />
         <div>
-          <audio src={episode.url} controls={true} className={styles.audioPlayer}>
+          <audio src={episode.url} controls={true} className={styles.audioPlayer} data-cy='audio-player'>
             Your browser does not support the <code>audio</code> element.
           </audio>
         </div>

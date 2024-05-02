@@ -13,7 +13,7 @@ export function PodcastGrid({ podcasts, onClicked, renderItem }: PodcastGridProp
     <CardGrid list={podcasts}>
       {podcasts.map((podcast) => {
         return (
-          <div key={podcast.podcastId} onClick={() => onClicked(podcast.podcastId)}>
+          <div data-cy='podcastCard' key={podcast.podcastId} onClick={() => onClicked(podcast.podcastId)}>
             {renderItem(podcast)}
           </div>
         )

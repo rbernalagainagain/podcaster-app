@@ -8,7 +8,7 @@ import React from 'react'
 registerSW()
 
 createRoot(document.getElementById('root')!).render(
-  // <React.StrictMode>
-  <RouterProvider router={AppRouter} />,
-  // </React.StrictMode>,
+  <React.StrictMode>
+    <RouterProvider router={AppRouter} />,
+  </React.StrictMode>,
 )

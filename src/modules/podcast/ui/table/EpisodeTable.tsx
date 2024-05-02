@@ -28,7 +28,7 @@ export const EpisodeTable = memo(
           {podcastDetail?.episodes.length !== 0 &&
             podcastDetail?.episodes.map((episode, key) => {
               return (
-                <tr key={key} data-podcastId={podcastId}>
+                <tr key={key}>
                   <td>
                     <Link to={`/podcast/${podcastId}/episode/${episode.episodeId}`}>{episode.episodeName}</Link>
                   </td>

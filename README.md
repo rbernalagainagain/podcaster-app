@@ -30,7 +30,9 @@ The application has a strong default cache. For this functionality it is importa
 
 ## Architecture
 
-**SOLID** principles have been followed, with a **Hexagonal / DDD architecture**
+**SOLID** principles have been followed, with a **Hexagonal / DDD architecture** with Use Cases.
+
+To Inject dependencies, use the **Locator pattern**.
 
 **_The application is built with the following technologies:_**
 
@@ -40,3 +42,22 @@ The application has a strong default cache. For this functionality it is importa
 - [TypeScript](https://www.typescriptlang.org/)
 - [Axios](https://axios-http.com/)
 - [Node.js](https://nodejs.org/) (version 20 or higher)
+
+## Tests
+
+The application has unit tests and integration tests. To run the tests:
+
+**_The tests are built with the following technologies:_**
+
+- [Vitest](https://vitejs.dev/guide/features.html#testing)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Cypress](https://www.cypress.io/)
+- [Ts-mockito](https://www.npmjs.com/package/ts-mockito)
+
+Unit tests && Component tests:
+
+`npm run test`
+
+End-to-end tests:
+
+`npm run cy:open`

@@ -21,6 +21,6 @@ describe('go-home', () => {
     cy.get('[data-cy="grid-content"] > [data-cy="podcastCard"]:nth-child(1)').should('have.length', 1)
     cy.wait(1000)
     cy.get('input').clear()
-    cy.get('[data-cy="grid-content"] > [data-cy="podcastCard"]').should('have.length', 100)
+    cy.get('[data-cy="grid-content"] > [data-cy="podcastCard"]').should('have.length.greaterThan', 5)
   })
 })

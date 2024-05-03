@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-const PAGE_SIZE = 5
+const PAGE_SIZE = 10
 let timeOutId: NodeJS.Timeout
 
 export const useInfinityScroll = <T>(list: T[]) => {
@@ -29,7 +29,7 @@ export const useInfinityScroll = <T>(list: T[]) => {
               setPiece((prev) => {
                 return [...prev, ...list.slice(prev.length, prev.length + PAGE_SIZE)]
               })
-            }, 100)
+            }, 50)
 
             return
           }
@@ -38,7 +38,7 @@ export const useInfinityScroll = <T>(list: T[]) => {
       },
       {
         root: null,
-        rootMargin: '0px',
+        rootMargin: '100px 0px',
         threshold: 1.0,
       },
     )

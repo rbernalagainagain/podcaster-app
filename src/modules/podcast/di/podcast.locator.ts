@@ -13,10 +13,6 @@ import { AxiosHttp } from '@shared/http-client/axios-http.ts'
 export class PodcastLocator {
   static mockRepository = mock<PodcastRepository>()
 
-  private static readonly podcastHttpRepository = !isModeTest
-    ? new PodcastHttpRepository(new AxiosHttp(instanceAxios))
-    : instance(PodcastLocator.mockRepository)
-
   static getPodcasts() {
     return new GetPodcastsQry(this.podcastHttpRepository)
   }
@@ -36,4 +32,8 @@ export class PodcastLocator {
   static getPodcastEpisodeById() {
     return new GetPodcastEpisodeByIdQry(this.podcastHttpRepository)
   }
+
+  private static readonly podcastHttpRepository = !isModeTest
+    ? new PodcastHttpRepository(new AxiosHttp(instanceAxios))
+    : instance(PodcastLocator.mockRepository)
 }

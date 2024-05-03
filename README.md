@@ -3,7 +3,7 @@
 This repository provides a deployment guide that demonstrates the Podcaster application. It offers a detailed step-by-step guide to configuring, modifying and using the application.
 
 The application is a podcast platform that allows you to listen to your favorite podcasts. It has a search engine that allows you to search for podcasts by name, author. It also has a player that allows you to listen to the podcast you want. 
-[Demo](https://podcaster-ten.vercel.app/)
+[Demo](https://podcaster-app-three.vercel.app/)
 
 To start working on it:
 

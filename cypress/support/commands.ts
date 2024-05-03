@@ -1,21 +1,18 @@
 /// <reference types="cypress" />
-// ***********************************************
-// This example commands.ts shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
+// eslint-disable-next-line @typescript-eslint/no-namespace
+declare namespace Cypress {
+  interface Chainable {
+    setCache(): Chainable<any>
+  }
+}
+
 // -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
+Cypress.Commands.add('setCache', () => {
+  return cy.request(
+    'Get',
+    'https://api.allorigins.win/get?url=https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json',
+  )
+})
 //
 //
 // -- This is a dual command --

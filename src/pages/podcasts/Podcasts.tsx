@@ -7,7 +7,7 @@ import { Input } from '@shared/components/input/Input.tsx'
 import { Counter } from '@shared/components/counter/Counter.tsx'
 import { PodcastLocator } from '@podcast/di/podcast.locator.ts'
 import { PodcastGrid } from '@podcast/ui/grid/PodcastGrid.tsx'
-import { PodcastCard } from '@podcast/ui/card/PodcastCard.tsx'
+import { RenderPodcastCard } from '@podcast/ui/render-podcast-card/RenderPodcastCard.tsx'
 
 export function Podcasts(): ReactNode {
   const navigate = useNavigate()
@@ -28,11 +28,7 @@ export function Podcasts(): ReactNode {
           <Input onChange={(ev) => handleSubmit(ev.target.value)} placeholder="Filter podcasts..." />
         </div>
 
-        <PodcastGrid
-          onClicked={onClicked}
-          podcasts={podcasts}
-          renderItem={(podcast) => <PodcastCard podcast={podcast} />}
-        />
+        <PodcastGrid onClicked={onClicked} podcasts={podcasts} renderItem={RenderPodcastCard} />
       </div>
     </div>
   )
